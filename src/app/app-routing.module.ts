@@ -3,9 +3,11 @@ import { HomeContentComponent } from './components/home-content/home-content/hom
 import { OfferContentComponent } from './components/offer-content/offer-content.component';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [
+const routes: Routes = [ 
   {path:'home', component: HomeContentComponent},
-  {path:'offer', component: OfferContentComponent}
+  {path:'offer', component: OfferContentComponent},
+  {path:'', redirectTo: '/home', pathMatch: 'full'},
+  {path:'**', redirectTo: '/home',pathMatch: 'full'}
 ];
 
 @NgModule({
