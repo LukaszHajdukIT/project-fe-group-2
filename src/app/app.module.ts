@@ -7,6 +7,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LogoComponent } from './components/logo/logo/logo.component';
 import { HomeContentComponent } from './components/home-content/home-content/home-content.component';
 import { OfferContentComponent } from './components/offer-content/offer-content.component';
+import { MenuItemComponent } from './components/menu-items/menu-item/menu-item.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { OfferContentComponent } from './components/offer-content/offer-content.
     NavBarComponent,
     LogoComponent,
     HomeContentComponent,
-    OfferContentComponent
+    OfferContentComponent,
+    MenuItemComponent
   ],
   imports: [
     BrowserModule,

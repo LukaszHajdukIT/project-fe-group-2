@@ -1,11 +1,11 @@
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" >
         <span class="navbar-toggler-icon"></span>
       </button>
         <app-logo></app-logo>
-        <app-menu-item *ngFor="let link of links" [label]="link.title">
+        <app-menu-item *ngFor="let link of links" [label]="link.title" [link]="link.link">
             
         </app-menu-item>
     </div>
