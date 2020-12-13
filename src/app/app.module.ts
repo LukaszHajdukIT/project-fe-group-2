@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LogoComponent } from './components/logo/logo/logo.component';
+import { HomeContentComponent } from './components/home-content/home-content/home-content.component';
+import { OfferContentComponent } from './components/offer-content/offer-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    LogoComponent
+    LogoComponent,
+    HomeContentComponent,
+    OfferContentComponent
   ],
   imports: [
     BrowserModule,
