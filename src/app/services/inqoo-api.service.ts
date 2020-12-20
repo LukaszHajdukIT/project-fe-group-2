@@ -12,8 +12,8 @@ export class InqooApiService {
 
   private baseUrl = 'http://localhost:8080/courses';
 
-  getAllCourses(): Observable<CoursesResponse> {
-    return this.http.get<CoursesResponse>(this.baseUrl);
+  getAllCourses(): Observable<CoursesResponse[]> {
+    return this.http.get<CoursesResponse[]>(this.baseUrl);
   }
 
 }
