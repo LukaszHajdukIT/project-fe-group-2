@@ -10,9 +10,10 @@ export class InqooApiService {
 
   constructor(private http: HttpClient) { }
 
-  private baseUrl = 'localhost:8080/courses';
+  private baseUrl = 'http://localhost:8080/courses';
 
   getAllCourses(): Observable<CoursesResponse> {
     return this.http.get<CoursesResponse>(this.baseUrl);
   }
+
 }
