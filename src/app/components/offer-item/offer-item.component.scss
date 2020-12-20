@@ -2,8 +2,17 @@
   box-sizing: border-box;
 }
 
+.container{
+  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 button {
-  margin: 15px;
-  width: 70vh;
-  height: 300px;
+margin: 15px;
+  width: 30vw;
+  height: 30vw;
 }
