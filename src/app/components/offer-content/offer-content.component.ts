@@ -7,4 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OfferContentComponent{
   categories: [{title: "title"}];
+
+  links: ILink [] = [
+    { path: 'Sales', title: 'IT' },
+    { path: 'offer', title: 'Offer' },
+  ];
 }
+
+interface ILink {
+ path: string;
+ title: string; 
+}
+
