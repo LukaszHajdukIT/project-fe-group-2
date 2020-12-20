@@ -5,6 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent{
-  
+
+export class NavBarComponent {
+  links: ILink [] = [
+    { path: 'home', title: 'Home' },
+    { path: 'offer', title: 'Offer' },
+  ];
+}
+
+interface ILink {
+ path: string;
+ title: string; 
 }

@@ -6,4 +6,5 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./offer-content.component.scss']
 })
 export class OfferContentComponent{
+  categories: [{title: "title"}];
 }
