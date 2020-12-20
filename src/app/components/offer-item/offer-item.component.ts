@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class OfferItemComponent implements OnInit {
 
-  @Input() offerSquare: String;
+  @Input() offerTitle: String;
   
   constructor() { }
 
