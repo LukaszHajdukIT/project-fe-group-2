@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class NavBarComponent {
-  links = [
+  links: ILink [] = [
     { path: 'home', title: 'Home' },
     { path: 'offer', title: 'Offer' },
   ];
+}
+
+interface ILink {
+ path: string;
+ title: string; 
 }
