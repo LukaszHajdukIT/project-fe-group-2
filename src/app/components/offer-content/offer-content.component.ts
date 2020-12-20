@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./offer-content.component.scss']
 })
 export class OfferContentComponent{
-  categories: [{title: "title"}];
-
-  links: ILink [] = [
-    { path: 'Sales', title: 'IT' },
-    { path: 'offer', title: 'Offer' },
+  offerItems: ILink [] = [
+    { path: 'IT', title: 'IT' },
+    { path: 'sales', title: 'Sales' },
+    { path: 'marketing', title: 'Marketing' },
+    { path: 'other', title: 'Other' },
   ];
 }
 

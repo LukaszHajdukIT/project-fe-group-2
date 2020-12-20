@@ -5,13 +5,8 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './offer-item.component.html',
   styleUrls: ['./offer-item.component.scss']
 })
-export class OfferItemComponent implements OnInit {
-
-  @Input() offerSquare: String;
+export class OfferItemComponent {
+ 
+  @Input() offerTitle: String;
   
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
