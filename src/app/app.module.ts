@@ -9,6 +9,7 @@ import { HomeContentComponent } from './components/home-content/home-content/hom
 import { OfferContentComponent } from './components/offer-content/offer-content.component';
 import { MenuItemComponent } from './components/menu-items/menu-item/menu-item.component';
 import { OfferItemComponent } from './components/offer-item/offer-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { OfferItemComponent } from './components/offer-item/offer-item.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

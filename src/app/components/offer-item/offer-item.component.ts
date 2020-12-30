@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CoursesResponse } from 'src/app/models/courses-response';
 
 @Component({
   selector: 'app-offer-item',
@@ -7,6 +8,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class OfferItemComponent {
  
-  @Input() offerTitle: String;
+  @Input() courses: CoursesResponse[];
   
 }
