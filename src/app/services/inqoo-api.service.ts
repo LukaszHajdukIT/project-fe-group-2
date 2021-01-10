@@ -18,15 +18,20 @@ export class InqooApiService {
   private categoryUrl = 'http://localhost:8080/category';
   private subcategoryUrl = 'http://localhost:8080/subcategory';
 
-  
+
   getAllCategories(): Observable<CategoriesResponse[]> {
     return this.http.get<CategoriesResponse[]>(this.categoryUrl);
   }
-  
+
   getAllSubcategories(): Observable<SubcategoriesResponse[]> {
     return this.http.get<SubcategoriesResponse[]>(this.subcategoryUrl);
   }
-  
+
+  getSubcategoriesForCategory(categoryName: string): Observable<SubcategoriesResponse[]> {
+    console.log('categoryName', categoryName);
+    return this.http.get<SubcategoriesResponse[]>(this.subcategoryUrl);
+  }
+
   getAllCourses(): Observable<CoursesResponse[]> {
     return this.http.get<CoursesResponse[]>(this.coursesUrl);
   }
