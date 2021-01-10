@@ -14,25 +14,22 @@ export class InqooApiService {
   constructor(private http: HttpClient) { }
 
   //TODO - export baseUrl to enviroment.ts
-  private coursesUrl = 'http://localhost:8080/courses';
-  private categoryUrl = 'http://localhost:8080/category';
-  private subcategoryUrl = 'http://localhost:8080/subcategory';
-
+  private baseUrl = 'http://localhost:8080';
 
   getAllCategories(): Observable<CategoriesResponse[]> {
-    return this.http.get<CategoriesResponse[]>(this.categoryUrl);
+    return this.http.get<CategoriesResponse[]>(`${this.baseUrl}/category`);
   }
 
   getAllSubcategories(): Observable<SubcategoriesResponse[]> {
-    return this.http.get<SubcategoriesResponse[]>(this.subcategoryUrl);
+    return this.http.get<SubcategoriesResponse[]>(`${this.baseUrl}/subcategory`);
   }
 
   getSubcategoriesForCategory(categoryName: string): Observable<SubcategoriesResponse[]> {
     console.log('categoryName', categoryName);
-    return this.http.get<SubcategoriesResponse[]>(this.subcategoryUrl);
+    return this.http.get<SubcategoriesResponse[]>(`${this.baseUrl}/subcategory`);
   }
 
   getAllCourses(): Observable<CoursesResponse[]> {
-    return this.http.get<CoursesResponse[]>(this.coursesUrl);
+    return this.http.get<CoursesResponse[]>(`${this.baseUrl}/courses`);
   }
 }
