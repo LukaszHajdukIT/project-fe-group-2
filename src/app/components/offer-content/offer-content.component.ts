@@ -7,7 +7,7 @@ import { CategoriesResponse } from '../../models/categories-response';
   templateUrl: './offer-content.component.html',
   styleUrls: ['./offer-content.component.scss']
 })
-export class OfferContentComponent {
+export class OfferContentComponent implements OnInit{
   categories: CategoriesResponse[];
 
   constructor(private service: InqooApiService) { }
