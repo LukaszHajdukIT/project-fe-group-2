@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CoursesResponse } from 'src/app/models/courses-response';
+import { CategoriesResponse } from 'src/app/models/categories-response';
 
 @Component({
   selector: 'app-offer-item',
@@ -8,6 +8,6 @@ import { CoursesResponse } from 'src/app/models/courses-response';
 })
 export class OfferItemComponent {
  
-  @Input() courses: CoursesResponse[];
+  @Input() categories: CategoriesResponse[];
   
 }
