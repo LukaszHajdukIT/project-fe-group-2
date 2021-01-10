@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { SubcategoriesResponse } from 'src/app/models/subcategories-response';
 
 @Component({
   selector: 'app-category-details',
@@ -7,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./category-details.component.scss']
 })
 export class CategoryDetailsComponent implements OnInit{
-name: string;
+  name: string;
 
   constructor(
     private route: ActivatedRoute,
