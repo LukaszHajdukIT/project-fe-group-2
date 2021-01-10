@@ -12,6 +12,7 @@ import { OfferItemComponent } from './components/offer-item/offer-item.component
 import { HttpClientModule } from '@angular/common/http';
 import { SubcategoryDetailsComponent } from './components/subcategory-details/subcategory-details.component';
 import { CategoryDetailsComponent } from './components/category-details/category-details.component';
+import { CourseDetailsComponent } from './components/course-details/course-details.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { CategoryDetailsComponent } from './components/category-details/category
     MenuItemComponent,
     OfferItemComponent,
     SubcategoryDetailsComponent,
-    CategoryDetailsComponent
+    CategoryDetailsComponent,
+    CourseDetailsComponent
+    
   ],
   imports: [
     BrowserModule,
