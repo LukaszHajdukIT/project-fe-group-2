@@ -19,15 +19,3 @@ export class OfferContentComponent {
       });
   }
 }
-//   offerItems: ILink[] = [
-//     { path: 'IT', title: 'IT' },
-//     { path: 'sales', title: 'Sales' },
-//     { path: 'marketing', title: 'Marketing' },
-//     { path: 'other', title: 'Other' },
-//   ];
-// }
-
-// interface ILink {
-//   path: string;
-//   title: string;
-// }
