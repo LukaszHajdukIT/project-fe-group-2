@@ -9,4 +9,5 @@ import { SubcategoriesResponse } from 'src/app/models/subcategories-response';
 export class SubcategoryDetailsComponent {
 
   @Input() subcategories: SubcategoriesResponse[];
+  
 }

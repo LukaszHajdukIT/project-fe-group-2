@@ -11,6 +11,7 @@ import { MenuItemComponent } from './components/menu-items/menu-item/menu-item.c
 import { OfferItemComponent } from './components/offer-item/offer-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SubcategoryDetailsComponent } from './components/subcategory-details/subcategory-details.component';
+import { CategoryDetailsComponent } from './components/category-details/category-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SubcategoryDetailsComponent } from './components/subcategory-details/su
     OfferContentComponent,
     MenuItemComponent,
     OfferItemComponent,
-    SubcategoryDetailsComponent
+    SubcategoryDetailsComponent,
+    CategoryDetailsComponent
   ],
   imports: [
     BrowserModule,
