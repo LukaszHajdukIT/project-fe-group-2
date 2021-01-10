@@ -1,12 +1,18 @@
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" >
+      <app-logo ></app-logo>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-        <app-logo></app-logo>
-        <app-menu-item *ngFor="let link of links" [label]="link.title" [link]="link.path">
-          
-        </app-menu-item>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <app-menu-item *ngFor="let link of links" [label]="link.title" [link]="link.path">
+              </app-menu-item>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
