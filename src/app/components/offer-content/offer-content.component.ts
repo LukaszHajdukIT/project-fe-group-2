@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InqooApiService } from 'src/app/services/inqoo-api.service';
-import { CoursesResponse} from '../../models/courses-response';
+import { CategoriesResponse } from '../../models/categories-response';
 
 @Component({
   selector: 'app-offer-content',
@@ -8,14 +8,14 @@ import { CoursesResponse} from '../../models/courses-response';
   styleUrls: ['./offer-content.component.scss']
 })
 export class OfferContentComponent {
-  courses: CoursesResponse[];
+  categories: CategoriesResponse[];
 
   constructor(private service: InqooApiService) { }
-  
+
   ngOnInit(): void {
-    this.service.getAllCourses()
+    this.service.getAllCategories()
       .subscribe((data) => {
-        this.courses = data;
+        this.categories = data;
       });
   }
 }
