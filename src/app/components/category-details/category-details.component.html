@@ -1,3 +1,8 @@
 <div class="container">
-    <app-subcategory-details *ngFor="let subcategory of subcategories" [subcategories]="subcategory.name"></app-subcategory-details>
+    <div class="row">
+        <div class="col-3" *ngFor="let subcategory of subcategories">
+            <app-subcategory-details [subcategories]="subcategory.name">
+            </app-subcategory-details>
+        </div>
     </div>
+</div>

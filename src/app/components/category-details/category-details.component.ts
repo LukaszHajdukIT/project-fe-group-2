@@ -11,7 +11,6 @@ import { switchMap } from 'rxjs/operators';
 })
 export class CategoryDetailsComponent implements OnInit{
 
-  // TODO add proper type here
   subcategories: SubcategoriesResponse[];
 
   constructor(

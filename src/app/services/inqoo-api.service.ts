@@ -13,7 +13,6 @@ export class InqooApiService {
 
   constructor(private http: HttpClient) { }
 
-  //TODO - export baseUrl to enviroment.ts
   private baseUrl = 'http://localhost:8080';
 
   getAllCategories(): Observable<CategoriesResponse[]> {
