@@ -9,5 +9,4 @@ import { CategoriesResponse } from 'src/app/models/categories-response';
 export class OfferItemComponent {
  
   @Input() categories: CategoriesResponse[];
-  
 }
