@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { CoursesResponse } from '../models/courses-response';
 import { CategoriesResponse } from '../models/categories-response';
 import { SubcategoriesResponse } from '../models/subcategories-response';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
@@ -19,8 +19,8 @@ export class InqooApiService {
     return this.http.get<CategoriesResponse[]>(`${this.baseUrl}/category`);
   }
 
-  getAllSubcategories(): Observable<SubcategoriesResponse[]> {
-    return this.http.get<SubcategoriesResponse[]>(`${this.baseUrl}/subcategory`);
+  getAllSubcategories(subcategoryId: number): Observable<SubcategoriesResponse[]> {
+    return this.http.get<SubcategoriesResponse[]>(`${this.baseUrl}/subcategory/${subcategoryId}`);
   }
 
   getSubcategoriesForCategory(categoryName: string): Observable<SubcategoriesResponse[]> {
