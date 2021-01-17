@@ -18,7 +18,6 @@ export class SubcategoryDetailsComponent implements OnInit{
   }
 
   ngOnInit() {
-    //TODO load courses for specific subcategory
     this.inqooService.getAllCoursesForSubcategory(this.subcategory.id).subscribe(
       data => this.courses = data
     )
