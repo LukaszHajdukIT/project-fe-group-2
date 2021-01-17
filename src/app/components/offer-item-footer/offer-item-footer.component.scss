@@ -1,8 +1,9 @@
-.p-3{
-background-color: rgba(0, 0, 0, 0.2);
+//TODO extract color to variable
+.p-3 {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.row{
-    display: flex;
-    justify-content: flex-end;
+.row {
+  display: flex;
+  justify-content: flex-end;
 }
