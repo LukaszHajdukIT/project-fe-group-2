@@ -8,9 +8,19 @@ import { InqooApiService } from 'src/app/services/inqoo-api.service';
   templateUrl: './subcategory-details.component.html',
   styleUrls: ['./subcategory-details.component.scss']
 })
-export class SubcategoryDetailsComponent {
+export class SubcategoryDetailsComponent implements OnInit{
 
-  @Input() subcategories: SubcategoriesResponse[];
+  @Input() subcategory: SubcategoriesResponse
 
-  @Input() courses: CoursesResponse[];
+  courses: CoursesResponse[];
+
+  constructor(private inqooService: InqooApiService) {
+  }
+
+  ngOnInit() {
+    //TODO load courses for specific subcategory
+    this.inqooService.getAllCoursesForSubcategory(this.subcategory.id).subscribe(
+      data => this.courses = data
+    )
+  }
 }

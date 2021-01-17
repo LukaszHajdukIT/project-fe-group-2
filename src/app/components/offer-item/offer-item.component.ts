@@ -7,6 +7,6 @@ import { CategoriesResponse } from 'src/app/models/categories-response';
   styleUrls: ['./offer-item.component.scss']
 })
 export class OfferItemComponent {
- 
-  @Input() categories: CategoriesResponse[];
+
+  @Input() category: CategoriesResponse;
 }
