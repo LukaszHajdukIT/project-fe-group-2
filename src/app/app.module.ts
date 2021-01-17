@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SubcategoryDetailsComponent } from './components/subcategory-details/subcategory-details.component';
 import { CategoryDetailsComponent } from './components/category-details/category-details.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
+import { OfferItemFooterComponent } from './components/offer-item-footer/offer-item-footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CourseDetailsComponent } from './components/course-details/course-detai
     OfferItemComponent,
     SubcategoryDetailsComponent,
     CategoryDetailsComponent,
-    CourseDetailsComponent
+    CourseDetailsComponent,
+    OfferItemFooterComponent
     
   ],
   imports: [
