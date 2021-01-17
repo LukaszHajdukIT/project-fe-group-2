@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CoursesResponse } from 'src/app/models/courses-response';
 import { SubcategoriesResponse } from 'src/app/models/subcategories-response';
 import { InqooApiService } from 'src/app/services/inqoo-api.service';
 
@@ -8,9 +7,14 @@ import { InqooApiService } from 'src/app/services/inqoo-api.service';
   templateUrl: './subcategory-details.component.html',
   styleUrls: ['./subcategory-details.component.scss']
 })
-export class SubcategoryDetailsComponent {
+export class SubcategoryDetailsComponent implements OnInit{
 
-  @Input() subcategories: SubcategoriesResponse[];
+  @Input() subcategory: SubcategoriesResponse
 
-  @Input() courses: CoursesResponse[];
+  constructor(private inqooService: InqooApiService) {
+  }
+
+  ngOnInit() {
+    //TODO load courses for specific subcategory
+  }
 }
