@@ -23,7 +23,7 @@ export class InqooApiService {
     return this.http.get<SubcategoriesResponse[]>(`${this.baseUrl}/subcategory/${subcategoryId}`);
   }
 
-  getAllCourses(): Observable<CoursesResponse[]> {
-    return this.http.get<CoursesResponse[]>(`${this.baseUrl}/courses`);
+  getAllCoursesForSubcategory(courseId: number): Observable<CoursesResponse[]> {
+    return this.http.get<CoursesResponse[]>(`${this.baseUrl}/courses/${courseId}`);
   }
 }
