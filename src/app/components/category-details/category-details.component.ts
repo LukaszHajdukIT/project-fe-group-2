@@ -20,7 +20,7 @@ export class CategoryDetailsComponent implements OnInit{
 
   ngOnInit() {
     this.route.queryParams.pipe(
-      switchMap(params => this.inqooService.getSubcategoriesForCategory(params['id']))
+      switchMap(params => this.inqooService.getAllSubcategoriesForCategory(params['id']))
     ).subscribe(subcategories => {
       this.subcategories = subcategories;
       console.log('subcategories', subcategories)

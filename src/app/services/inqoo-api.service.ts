@@ -19,13 +19,8 @@ export class InqooApiService {
     return this.http.get<CategoriesResponse[]>(`${this.baseUrl}/category`);
   }
 
-  getAllSubcategories(subcategoryId: number): Observable<SubcategoriesResponse[]> {
+  getAllSubcategoriesForCategory(subcategoryId: number): Observable<SubcategoriesResponse[]> {
     return this.http.get<SubcategoriesResponse[]>(`${this.baseUrl}/subcategory/${subcategoryId}`);
-  }
-
-  getSubcategoriesForCategory(categoryName: string): Observable<SubcategoriesResponse[]> {
-    console.log('categoryName', categoryName);
-    return this.http.get<SubcategoriesResponse[]>(`${this.baseUrl}/subcategory`);
   }
 
   getAllCourses(): Observable<CoursesResponse[]> {
