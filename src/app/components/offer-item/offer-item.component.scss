@@ -1,9 +1,40 @@
 button {
-  width: 35vw;
-  height: 35vw;
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 50vw;
+  height: 50vw;
   background-color: darkblue;
+  font-size: 1rem;
 }
 
 button:hover {
   background-color: royalblue;
+}
+
+@media (min-width: 1200px){
+  button{
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 576px){
+  button{
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 768px){
+  button{
+    width: 25vw;
+    height: 25vw;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 992px){
+  button{
+    font-size: 1.7rem;
+    width: 25vw;
+    height: 25vw;
+  }
 }
