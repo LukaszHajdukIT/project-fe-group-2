@@ -1,9 +1,11 @@
-//TODO extract color to variable
-.p-3 {
-  background-color: rgba(0, 0, 0, 0.2);
-}
+@import "../../../assets/variables.scss";
 
 .row {
   display: flex;
   justify-content: flex-end;
 }
+
+.text{
+  color: $hover-color;
+}
+
