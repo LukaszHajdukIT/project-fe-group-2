@@ -10,11 +10,16 @@ import { InqooApiService } from 'src/app/services/inqoo-api.service';
 })
 export class SubcategoryDetailsComponent implements OnInit{
 
-  @Input() subcategory: SubcategoriesResponse
+  @Input() subcategory: SubcategoriesResponse;
+
 
   courses: CoursesResponse[];
 
   constructor(private inqooService: InqooApiService) {
+  }
+
+  onCheckboxClicked(event): void{
+    console.log("klik", event);
   }
 
   ngOnInit() {
@@ -22,4 +27,5 @@ export class SubcategoryDetailsComponent implements OnInit{
       data => this.courses = data
     )
   }
+
 }

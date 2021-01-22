@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { EventEmitter } from 'events';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { CoursesResponse } from 'src/app/models/courses-response';
 
 @Component({
@@ -10,15 +9,19 @@ import { CoursesResponse } from 'src/app/models/courses-response';
 export class CourseDetailsComponent implements OnInit{
 
   @Input() course: CoursesResponse;
-  // @Output() onCheckboxClicked = new EventEmitter< {course: CoursesResponse, isChecked: boolean}>();
+  @Output() onCheckboxClicked = new EventEmitter< {course: CoursesResponse, isChecked: boolean} >();
 
   isChecked: boolean = false;
-
+  
+  constructor(){
+    
+  }
   ngOnInit(): void {
   }
 
   public onClick(): void {
     this.isChecked = !this.isChecked;
-      console.log("Kliknięto");
+    
+      this.onCheckboxClicked.emit({course: this.course, isChecked: this.isChecked});
   }
 }

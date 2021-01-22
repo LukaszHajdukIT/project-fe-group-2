@@ -3,5 +3,7 @@
         <li class="list-group-item active text-center">{{subcategory.name}}</li>
       </ul>
 </div>
-<app-course-details *ngFor="let course of courses" [course]="course">
+<div >
+<app-course-details *ngFor="let course of courses" [course]="course" (onCheckboxClicked)="onCheckboxClicked($event)">
 </app-course-details>
+</div>
