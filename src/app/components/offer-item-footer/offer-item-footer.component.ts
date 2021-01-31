@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SubmitService } from '../../services/submit.service'
 
 @Component({
@@ -6,12 +6,9 @@ import { SubmitService } from '../../services/submit.service'
   templateUrl: './offer-item-footer.component.html',
   styleUrls: ['./offer-item-footer.component.scss']
 })
-export class OfferItemFooterComponent implements OnInit {
+export class OfferItemFooterComponent {
 
   constructor(private SubmitService: SubmitService){}
-   
-  ngOnInit(): void {
-  }
 
   public onSubmitClick(): void{
     console.log('click');
