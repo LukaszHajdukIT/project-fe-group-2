@@ -14,6 +14,7 @@ import { SubcategoryDetailsComponent } from './components/subcategory-details/su
 import { CategoryDetailsComponent } from './components/category-details/category-details.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
 import { OfferItemFooterComponent } from './components/offer-item-footer/offer-item-footer.component';
+import { SubmitService } from './services/submit.service';
 
 @NgModule({
   declarations: [
@@ -28,14 +29,15 @@ import { OfferItemFooterComponent } from './components/offer-item-footer/offer-i
     CategoryDetailsComponent,
     CourseDetailsComponent,
     OfferItemFooterComponent
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    SubmitService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
