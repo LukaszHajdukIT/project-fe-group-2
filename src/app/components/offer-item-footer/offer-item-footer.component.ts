@@ -8,7 +8,6 @@ import { SubmitService } from '../../services/submit.service'
 })
 export class OfferItemFooterComponent {
 
-
   constructor(private submitService: SubmitService) { }
 
   public onSubmitClick(): void {
