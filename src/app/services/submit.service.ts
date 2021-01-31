@@ -35,6 +35,10 @@ export class SubmitService {
     this.email = email;
   }
 
+  getEmail(){
+    return this.email;
+  }
+
   private clearCoursesAfterSubmit(): void {
     this.checkedCourses = [];
   }

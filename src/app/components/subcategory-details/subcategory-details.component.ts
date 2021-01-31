@@ -30,5 +30,4 @@ export class SubcategoryDetailsComponent implements OnInit {
       data => this.courses = data
     )
   }
-
 }
