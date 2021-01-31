@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './offer-summary.component.html',
   styleUrls: ['./offer-summary.component.scss']
 })
-export class OfferSummaryComponent {
-
-}
+export class OfferSummaryComponent {}
