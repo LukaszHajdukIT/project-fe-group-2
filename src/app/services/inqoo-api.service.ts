@@ -26,4 +26,14 @@ export class InqooApiService {
   getAllCoursesForSubcategory(courseId: number): Observable<CoursesResponse[]> {
     return this.http.get<CoursesResponse[]>(`${this.baseUrl}/courses/${courseId}`);
   }
+
+  sendMail(courses: number[], email: string){
+    if(courses === null || courses === undefined){
+      throw 'courses cant be null or undefined';
+    }
+    if(email === null || email === undefined){
+      throw 'email cant be null or undefined';
+    }
+    return of(true);
+  }
 }
