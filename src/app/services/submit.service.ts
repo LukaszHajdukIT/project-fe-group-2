@@ -8,17 +8,16 @@ export class SubmitService {
 
   constructor() { }
 
-  handleCourseCheck(courseId: number, isChecked: boolean){
-      if(isChecked === true) this.checkedCourses.push(courseId);
-      if(isChecked === false) this.checkedCourses = this.checkedCourses.filter( id => id !== courseId)
+  handleCourseCheck(courseId: number, isChecked: boolean) {
+    if (isChecked === true) this.checkedCourses.push(courseId);
+    if (isChecked === false) this.checkedCourses = this.checkedCourses.filter(id => id !== courseId)
   }
 
-  getCheckedCourses(): number[]{
+  getCheckedCourses(): number[] {
     return this.checkedCourses;
   }
 
-  clearCoursesAfterSubmit(): void{
+  clearCoursesAfterSubmit(): void {
     this.checkedCourses = [];
-    console.log(this.checkedCourses);
   }
 }

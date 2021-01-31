@@ -8,10 +8,10 @@ import { SubmitService } from '../../services/submit.service'
 })
 export class OfferItemFooterComponent {
 
-  constructor(private submitService: SubmitService){}
+  constructor(private submitService: SubmitService) { }
 
-  public onSubmitClick(): void{
-    console.log(this.submitService.getCheckedCourses());
+  public onSubmitClick(): void {
+    this.submitService.getCheckedCourses();
     this.submitService.clearCoursesAfterSubmit();
   }
 }
