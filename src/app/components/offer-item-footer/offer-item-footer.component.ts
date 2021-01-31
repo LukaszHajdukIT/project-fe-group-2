@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SubmitService } from '../../services/submit.service'
 
 @Component({
@@ -17,4 +17,5 @@ export class OfferItemFooterComponent {
   onInputValueChange(value: string){
     this.submitService.setEmail(value);
   }
+  
 }
