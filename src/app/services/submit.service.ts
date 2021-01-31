@@ -18,9 +18,7 @@ export class SubmitService {
   }
 
   clearCoursesAfterSubmit(): void{
-    for(let i = this.checkedCourses.length; i > 0; i--){
-      this.checkedCourses.pop();
-    }
+    this.checkedCourses = [];
     console.log(this.checkedCourses);
   }
 }
