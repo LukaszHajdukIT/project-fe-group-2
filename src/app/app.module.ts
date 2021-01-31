@@ -16,6 +16,7 @@ import { CourseDetailsComponent } from './components/course-details/course-detai
 import { OfferItemFooterComponent } from './components/offer-item-footer/offer-item-footer.component';
 import { SubmitService } from './services/submit.service';
 import { OfferSummaryComponent } from './components/offer-summary/offer-summary.component';
+import { MailSummaryComponent } from './components/mail-summary/mail-summary.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { OfferSummaryComponent } from './components/offer-summary/offer-summary.
     CategoryDetailsComponent,
     CourseDetailsComponent,
     OfferItemFooterComponent,
-    OfferSummaryComponent
+    OfferSummaryComponent,
+    MailSummaryComponent
   ],
   imports: [
     BrowserModule,
