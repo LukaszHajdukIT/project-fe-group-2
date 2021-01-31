@@ -11,10 +11,16 @@ export class SubmitService {
   handleCourseCheck(courseId: number, isChecked: boolean){
       if(isChecked === true) this.checkedCourses.push(courseId);
       if(isChecked === false) this.checkedCourses = this.checkedCourses.filter( id => id !== courseId)
-      console.log(this.checkedCourses)
   }
 
   getCheckedCourses(): number[]{
     return this.checkedCourses;
+  }
+
+  clearCoursesAfterSubmit(): void{
+    for(let i = this.checkedCourses.length; i > 0; i--){
+      this.checkedCourses.pop();
+    }
+    console.log(this.checkedCourses);
   }
 }
