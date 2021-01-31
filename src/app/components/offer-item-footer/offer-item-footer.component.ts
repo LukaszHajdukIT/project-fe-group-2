@@ -11,7 +11,10 @@ export class OfferItemFooterComponent {
   constructor(private submitService: SubmitService) { }
 
   public onSubmitClick(): void {
-    this.submitService.getCheckedCourses();
-    this.submitService.clearCoursesAfterSubmit();
+    this.submitService.submitHandler();
+  }
+
+  onInputValueChange(value: string){
+    this.submitService.setEmail(value);
   }
 }
