@@ -23,13 +23,9 @@ export class SubmitService {
   submitHandler() {
     this.api.sendMail(this.checkedCourses, this.email).subscribe(
       success => {
-        console.log('success', success)
-
         this.goToSummary();
-        // this.clearCoursesAfterSubmit();
       },
       error => {
-        console.log('error', error)
       }
     );
   }

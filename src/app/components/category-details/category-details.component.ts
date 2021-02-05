@@ -23,7 +23,6 @@ export class CategoryDetailsComponent implements OnInit{
       switchMap(params => this.inqooService.getAllSubcategoriesForCategory(params['id']))
     ).subscribe(subcategories => {
       this.subcategories = subcategories;
-      console.log('subcategories', subcategories)
     });
   }
 }
