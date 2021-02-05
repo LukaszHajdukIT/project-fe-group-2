@@ -53,7 +53,7 @@ export class SubmitService {
     return this.allCourses;
   }
 
-  private clearCoursesAfterSubmit(): void {
+  clearCoursesAfterSubmit(): void {
     this.checkedCourses = [];
   }
 
