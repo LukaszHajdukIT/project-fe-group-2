@@ -27,7 +27,11 @@ export class SubcategoryDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.inqooService.getAllCoursesForSubcategory(this.subcategory.id).subscribe(
-      data => this.courses = data
+      data => {
+        this.courses = data;
+        console.log('xxxxxx', data)
+        this.submitService.appendAllCourses(data);
+      },
     )
   }
 }

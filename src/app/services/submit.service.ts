@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { CoursesResponse } from '../models/courses-response';
 import { InqooApiService } from './inqoo-api.service';
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,8 @@ export class SubmitService {
   private checkedCourses: number[] = [];
 
   private email: string;
+
+  allCourses: CoursesResponse[];
 
   constructor(private router: Router, private api: InqooApiService) { }
 
@@ -22,8 +25,8 @@ export class SubmitService {
       success => {
         console.log('success', success)
 
-        this.clearCoursesAfterSubmit();
         this.goToSummary();
+        // this.clearCoursesAfterSubmit();
       },
       error => {
         console.log('error', error)
@@ -35,8 +38,23 @@ export class SubmitService {
     this.email = email;
   }
 
-  getEmail(){
+  getEmail() {
     return this.email;
+  }
+
+  getCheckedCourses() {
+    return this.checkedCourses;
+  }
+
+  appendAllCourses(allCourses: CoursesResponse[]) {
+    const coursesSet = new Set(this.allCourses);
+    allCourses.forEach(course => coursesSet.add(course));
+
+    this.allCourses = Array.from(coursesSet);
+  }
+
+  getAllCourses() {
+    return this.allCourses;
   }
 
   private clearCoursesAfterSubmit(): void {
