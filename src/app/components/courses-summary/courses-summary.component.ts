@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CoursesResponse } from 'src/app/models/courses-response';
 import { SubmitService } from 'src/app/services/submit.service';
 
 @Component({
@@ -7,16 +8,24 @@ import { SubmitService } from 'src/app/services/submit.service';
   styleUrls: ['./courses-summary.component.scss']
 })
 export class CoursesSummaryComponent implements OnInit {
-  
-  checkedCourses: number[];
 
-  constructor(private submitService: SubmitService){}
+  checkedCourses: CoursesResponse[];
+
+  constructor(private submitService: SubmitService) { }
 
   ngOnInit(): void {
-    this.getCheckedCourses();
-    console.log(this.submitService.getAllCourses());
+    this.checkedCourses = this.getCheckedCourses();
   }
-  getCheckedCourses(){
-    this.checkedCourses = this.submitService.getCheckedCourses();
+  getCheckedCourses(): CoursesResponse[] {
+    const checkedIds = this.submitService.getCheckedCourses();
+    const allCourses = this.submitService.getAllCourses();
+
+    const checkedCourses = allCourses.filter(course => {
+      const find = checkedIds.find(id => id === course.id);
+      return find !== undefined;
+    });
+
+
+    return checkedCourses;
   }
 }
