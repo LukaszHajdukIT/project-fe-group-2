@@ -6,7 +6,6 @@ import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { MailResponse } from '../models/mail-response';
 
-
 @Injectable({
   providedIn: 'root'
 })
