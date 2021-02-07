@@ -8,13 +8,22 @@ import { SubmitService } from '../../services/submit.service'
 })
 export class OfferItemFooterComponent {
 
+  isMailValid: boolean = true;
+
   constructor(private submitService: SubmitService) { }
 
   public onSubmitClick(): void {
     this.submitService.submitHandler();
   }
 
-  onInputValueChange(value: string){
-    this.submitService.setEmail(value);
+  onInputValueChange(value: string) {
+    const reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    if (!reg.test(value)) {
+      this.isMailValid = false;
+    }
+    else {
+      this.isMailValid = true;
+      this.submitService.setEmail(value);
+    }
   }
 }
