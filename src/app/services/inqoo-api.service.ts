@@ -4,7 +4,7 @@ import { CategoriesResponse } from '../models/categories-response';
 import { SubcategoriesResponse } from '../models/subcategories-response';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-
+import { MailResponse } from '../models/mail-response';
 
 @Injectable({
   providedIn: 'root'
@@ -27,13 +27,7 @@ export class InqooApiService {
     return this.http.get<CoursesResponse[]>(`${this.baseUrl}/courses/${courseId}`);
   }
 
-  sendMail(courses: number[], email: string){
-    if(courses === null || courses === undefined){
-      throw 'courses cant be null or undefined';
-    }
-    if(email === null || email === undefined){
-      throw 'email cant be null or undefined';
-    }
-    return of(true);
+  sendMail(courses: number[], email: string): Observable<void> {
+    return this.http.post<void>(`${this.baseUrl}/mail`, { ids: courses, address: email });
   }
 }

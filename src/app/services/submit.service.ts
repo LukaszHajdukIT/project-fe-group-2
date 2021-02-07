@@ -26,6 +26,7 @@ export class SubmitService {
         this.goToSummary();
       },
       error => {
+        console.log("error")
       }
     );
   }
