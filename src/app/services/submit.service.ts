@@ -50,8 +50,6 @@ export class SubmitService {
     this.allCourses = Array.from(coursesSet);
   }
 
-  
-
   getAllCourses() {
     return this.allCourses;
   }
