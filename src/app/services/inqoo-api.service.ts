@@ -27,7 +27,7 @@ export class InqooApiService {
     return this.http.get<CoursesResponse[]>(`${this.baseUrl}/courses/${courseId}`);
   }
 
-  sendMail(courses: number[], email: string): Observable<MailResponse> {
-    return this.http.post<MailResponse>(`${this.baseUrl}/mail`, {ids: courses, address: email });
+  sendMail(courses: number[], email: string): Observable<void> {
+    return this.http.post<void>(`${this.baseUrl}/mail`, { ids: courses, address: email });
   }
 }
